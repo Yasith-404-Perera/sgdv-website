@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sri Gunarathana Dharma Vidyalaya — Path of the Dhamma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+Sinhala:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<div class="cur-dot" id="cdot"></div>
+<div class="cur-ring" id="cring"></div>
+<button class="bktop" id="bktop">↑</button>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nlogo">
+    <span class="logo" id="logo"><img src="/img/logo.png" alt="Logo"></span>
+    <span class="ab" data-i18n="nav-brand">Sri Gunarathana Dharma Vidyalaya</span>
+    <span style="font-weight:300;font-size:.82rem;opacity:.75" data-i18n="nav-sub">Dharma Vidyalaya</span>
+  </a>
+  <ul class="nl">
+    <li><a href="#intro" data-i18n="nav-about">About</a></li>
+    <li><a href="#mission" data-i18n="nav-mission">Mission</a></li>
+    <li><a href="#classes" data-i18n="nav-classes">Classes</a></li>
+    <li><a href="#gallery" data-i18n="nav-gallery">Gallery</a></li>
+    <li><a href="#teachers" data-i18n="nav-teachers">Teachers</a></li>
+    <li><a href="#events" data-i18n="nav-events">Events</a></li>
+    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+    <li><button class="ltog" id="lbtn">සි</button></li>
+  </ul>
+  <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mmenu">
+  <a href="#intro" data-i18n="nav-about">About</a><a href="#mission" data-i18n="nav-mission">Mission</a><a href="#classes" data-i18n="nav-classes">Classes</a>
+  <a href="#gallery" data-i18n="nav-gallery">Gallery</a><a href="#teachers" data-i18n="nav-teachers">Teachers</a>
+  <a href="#events" data-i18n="nav-events">Events</a><a href="#contact" data-i18n="nav-contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-ov">
+    <div class="h-mark">ශ්‍රී ගුණරතන ධර්ම විද්‍යාලය</div>
+    <div class="h-sch" data-i18n="hero-school">Sri Gunarathana Dharma Vidyalaya</div>
+    <h1 class="h-h1" data-i18n="hero-h1">The Path Begins<em>Within Stillness</em></h1>
+    <p class="h-sub" data-i18n="hero-sub">Guiding young minds through the timeless path of the Dhamma — wisdom, compassion, and inner peace.</p>
+    <div class="h-btns">
+      <a href="#intro" class="btn-p" data-i18n="hero-btn1">Begin the Journey</a>
+      <a href="#contact" class="btn-o" data-i18n="hero-btn2">Enroll Your Child</a>
+    </div>
+  </div>
+  <div class="h-scroll" id="hscroll"><span data-i18n="hero-scroll">Scroll to awaken</span><div class="h-arr"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="intro">
+  <div class="inner">
+    <div class="stag rv"><span data-i18n="about-tag">Our Sanctuary</span></div>
+    <h2 class="rv" data-i18n="about-h2">A school where silence speaks</h2>
+    <p class="rv" data-i18n="about-p">Founded in the spirit of the Buddha's teaching, SGDV is a Dhamma school nurturing children in mindfulness, ethics, and the timeless wisdom of the Theravāda tradition. Here, the lessons of two thousand years meet the curiosity of every young heart.</p>
+    <div class="pali-v rv">
+      <em>"Sabbapāpassa akaraṇaṃ, kusalassa upasampadā — sadacittapariyodapanaṃ, etaṃ buddhānasāsanaṃ."</em>
+      <cite data-i18n="about-cite">— Dhammapada 183 · The teaching of all the Buddhas</cite>
+    </div>
+  </div>
+</section>
+
+<!-- DHARMA WHEEL -->
+<section id="wheel-sec">
+  <div class="wc">
+    <div class="rvl">
+      <svg id="dw" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="95" fill="none" stroke="#c9a84c" stroke-width="3" opacity=".4"/>
+        <circle cx="100" cy="100" r="16" fill="none" stroke="#c9a84c" stroke-width="4"/>
+        <circle cx="100" cy="100" r="6" fill="#c9a84c"/>
+        <g stroke="#c9a84c" stroke-width="2.5" opacity=".85">
+          <line x1="100" y1="84" x2="100" y2="15"/><line x1="100" y1="116" x2="100" y2="185"/>
+          <line x1="84" y1="100" x2="15" y2="100"/><line x1="116" y1="100" x2="185" y2="100"/>
+          <line x1="88.7" y1="88.7" x2="37.6" y2="37.6"/><line x1="111.3" y1="111.3" x2="162.4" y2="162.4"/>
+          <line x1="111.3" y1="88.7" x2="162.4" y2="37.6"/><line x1="88.7" y1="111.3" x2="37.6" y2="162.4"/>
+        </g>
+        <g fill="none" stroke="#c9a84c" stroke-width="1.5" opacity=".35">
+          <circle cx="100" cy="10" r="7"/><circle cx="100" cy="190" r="7"/>
+          <circle cx="10" cy="100" r="7"/><circle cx="190" cy="100" r="7"/>
+          <circle cx="29.3" cy="29.3" r="7"/><circle cx="170.7" cy="170.7" r="7"/>
+          <circle cx="170.7" cy="29.3" r="7"/><circle cx="29.3" cy="170.7" r="7"/>
+        </g>
+        <circle cx="100" cy="100" r="76" fill="none" stroke="#c9a84c" stroke-width="1" opacity=".2"/>
+      </svg>
+    </div>
+    <div class="wt rvr">
+      <h2 data-i18n="wheel-h2">The Noble <em>Eightfold Path</em></h2>
+      <p data-i18n="wheel-p">The dhamma wheel — Dhammacakka — represents the Buddha's first teaching at Deer Park, Sarnath. Its eight spokes embody the path to liberation, the very heart of what we teach at SGDV.</p>
+    </div>
+  </div>
+  <div class="epath" style="margin-top:3rem">
+    <div class="ep rv"><div class="en">①</div><div class="enm" data-i18n="ep-1">Right View</div></div>
+    <div class="ep rv"><div class="en">②</div><div class="enm" data-i18n="ep-2">Right Intention</div></div>
+    <div class="ep rv"><div class="en">③</div><div class="enm" data-i18n="ep-3">Right Speech</div></div>
+    <div class="ep rv"><div class="en">④</div><div class="enm" data-i18n="ep-4">Right Action</div></div>
+    <div class="ep rv"><div class="en">⑤</div><div class="enm" data-i18n="ep-5">Right Livelihood</div></div>
+    <div class="ep rv"><div class="en">⑥</div><div class="enm" data-i18n="ep-6">Right Effort</div></div>
+    <div class="ep rv"><div class="en">⑦</div><div class="enm" data-i18n="ep-7">Right Mindfulness</div></div>
+    <div class="ep rv"><div class="en">⑧</div><div class="enm" data-i18n="ep-8">Right Concentration</div></div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="inner">
+    <div class="mh">
+      <div class="stag rv"><span data-i18n="mission-tag">Our Mission</span></div>
+      <h2 class="rv" data-i18n="mission-h2">From ignorance to <em>enlightenment</em></h2>
+      <p class="rv" data-i18n="mission-p">We walk with our students along the Noble Eightfold Path — cultivating right view, right intention, and right mindfulness. Each lesson is a step toward awakening.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar rv"><div class="ico">☸️</div><h3 data-i18n="pillar-h1">Wisdom</h3><p data-i18n="pillar-p1">Understanding the four noble truths through gentle, age-appropriate teaching that honours the child's natural curiosity.</p></div>
+      <div class="pillar rv"><div class="ico">🪷</div><h3 data-i18n="pillar-h2">Compassion</h3><p data-i18n="pillar-p2">Loving-kindness practice and service to family, community, and all beings without exception.</p></div>
+      <div class="pillar rv"><div class="ico">🕯️</div><h3 data-i18n="pillar-h3">Mindfulness</h3><p data-i18n="pillar-p3">Daily meditation and breath awareness to settle the restless mind and cultivate inner stillness.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STUPA PARALLAX -->
+<div id="sp-band">
+  <canvas id="sp-canvas"></canvas>
+  <div class="sp-text">
+    <blockquote class="rv" data-i18n="stupa-quote">"He who has understood the Dhamma is like the full moon — serene, whole, and radiant in the night sky."</blockquote>
+    <cite class="rv" data-i18n="stupa-cite">— Theravāda tradition</cite>
+  </div>
+</div>
+
+<!-- VESAK BANNER -->
+<div id="vesak">
+  <div class="lrow">
+    <svg class="lan" viewBox="0 0 40 70"><rect x="15" y="0" width="10" height="5" fill="#8a6820"/><ellipse cx="20" cy="35" rx="13" ry="22" fill="#e2b84c" opacity=".9"/><ellipse cx="20" cy="35" rx="9" ry="17" fill="#f5d876" opacity=".5"/><rect x="18" y="57" width="4" height="8" fill="#c9a84c"/><circle cx="20" cy="35" r="3" fill="#fff9c4" opacity=".7" style="animation:flicker 1.5s infinite"/></svg>
+    <svg class="lan" viewBox="0 0 40 70"><rect x="15" y="0" width="10" height="5" fill="#8a6820"/><ellipse cx="20" cy="35" rx="13" ry="22" fill="#e84c4c" opacity=".85"/><ellipse cx="20" cy="35" rx="9" ry="17" fill="#ff8080" opacity=".4"/><rect x="18" y="57" width="4" height="8" fill="#c9a84c"/></svg>
+    <svg class="lan" viewBox="0 0 40 70"><rect x="15" y="0" width="10" height="5" fill="#8a6820"/><ellipse cx="20" cy="35" rx="13" ry="22" fill="#4cade2" opacity=".85"/><ellipse cx="20" cy="35" rx="9" ry="17" fill="#90d4f7" opacity=".4"/><rect x="18" y="57" width="4" height="8" fill="#c9a84c"/></svg>
+    <svg class="lan" viewBox="0 0 40 70"><rect x="15" y="0" width="10" height="5" fill="#8a6820"/><ellipse cx="20" cy="35" rx="13" ry="22" fill="#4ce26f" opacity=".85"/><ellipse cx="20" cy="35" rx="9" ry="17" fill="#90f7b0" opacity=".4"/><rect x="18" y="57" width="4" height="8" fill="#c9a84c"/></svg>
+    <svg class="lan" viewBox="0 0 40 70"><rect x="15" y="0" width="10" height="5" fill="#8a6820"/><ellipse cx="20" cy="35" rx="13" ry="22" fill="#e2c94c" opacity=".9"/><ellipse cx="20" cy="35" rx="9" ry="17" fill="#f5e87c" opacity=".5"/><rect x="18" y="57" width="4" height="8" fill="#c9a84c"/></svg>
+    <svg class="lan" viewBox="0 0 40 70"><rect x="15" y="0" width="10" height="5" fill="#8a6820"/><ellipse cx="20" cy="35" rx="13" ry="22" fill="#e24ca8" opacity=".85"/><ellipse cx="20" cy="35" rx="9" ry="17" fill="#f790d8" opacity=".4"/><rect x="18" y="57" width="4" height="8" fill="#c9a84c"/></svg>
+    <svg class="lan" viewBox="0 0 40 70"><rect x="15" y="0" width="10" height="5" fill="#8a6820"/><ellipse cx="20" cy="35" rx="13" ry="22" fill="#e2804c" opacity=".88"/><ellipse cx="20" cy="35" rx="9" ry="17" fill="#f7b590" opacity=".4"/><rect x="18" y="57" width="4" height="8" fill="#c9a84c"/></svg>
+  </div>
+  <div class="vtx rv" data-i18n="vesak-text">✦ Celebrating Vesak, Poson &amp; Esala Perahera with joy and devotion ✦</div>
+</div>
+
+<!-- CLASSES -->
+<section id="classes">
+  <div class="inner">
+    <div class="stag rv"><span data-i18n="classes-tag">Classes &amp; Activities</span></div>
+    <h2 class="rv" data-i18n="classes-h2">Practices for every young mind</h2>
+    <div class="cg">
+      <div class="cc rv" data-modal="m-dhamma"><div class="cico">📖</div><h3 data-i18n="class-h1">Dhamma Lessons</h3><p data-i18n="class-p1">Stories of the Buddha, Jātaka tales, and the foundations of Buddhist ethics.</p><button class="lbtn" data-i18n="class-btn">Learn more →</button></div>
+      <div class="cc rv" data-modal="m-meditation"><div class="cico">🧘</div><h3 data-i18n="class-h2">Meditation</h3><p data-i18n="class-p2">Guided ānāpānasati and mettā practice to cultivate calm and kindness.</p><button class="lbtn" data-i18n="class-btn">Learn more →</button></div>
+      <div class="cc rv" data-modal="m-pali"><div class="cico">🎵</div><h3 data-i18n="class-h3">Pāli Chanting</h3><p data-i18n="class-p3">Learning the rhythm and meaning of traditional sutta chants.</p><button class="lbtn" data-i18n="class-btn">Learn more →</button></div>
+      <div class="cc rv" data-modal="m-cultural"><div class="cico">🪔</div><h3 data-i18n="class-h4">Cultural Events</h3><p data-i18n="class-p4">Vesak lanterns, Poson processions, and seasonal community celebrations.</p><button class="lbtn" data-i18n="class-btn">Learn more →</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="inner">
+    <div class="stag rv"><span data-i18n="sched-tag">Sunday Programme</span></div>
+    <h2 class="rv" data-i18n="sched-h2">Weekly Timetable</h2>
+    <table class="sch-t rv">
+      <thead><tr><th data-i18n="th-time">Time</th><th data-i18n="th-activity">Activity</th><th data-i18n="th-age">Age Group</th><th data-i18n="th-teacher">Teacher</th></tr></thead>
+      <tbody>
+        <tr><td class="tc">8:00 – 8:20</td><td data-i18n="sched-a1">Morning Pāli Chanting &amp; Blessings</td><td data-i18n="sched-g1">All students</td><td>Ven. Sumana Thera</td></tr>
+        <tr><td class="tc">8:20 – 9:00</td><td data-i18n="sched-a2">Ānāpānasati Meditation</td><td data-i18n="sched-g1">All students</td><td>Ven. Dhammika</td></tr>
+        <tr><td class="tc">9:00 – 10:00</td><td data-i18n="sched-a3">Dhamma Lessons &amp; Jātaka Stories</td><td data-i18n="sched-g2">Ages 6 – 12</td><td>Ms. Anula Perera</td></tr>
+        <tr><td class="tc">9:00 – 10:00</td><td data-i18n="sched-a4">Advanced Dhamma Study</td><td data-i18n="sched-g3">Ages 13 – 18</td><td>Ven. Sumana Thera</td></tr>
+        <tr><td class="tc">10:00 – 10:30</td><td data-i18n="sched-a5">Mettā Practice &amp; Dana</td><td data-i18n="sched-g1">All students</td><td>Ven. Dhammika</td></tr>
+        <tr><td class="tc">10:30 – 11:00</td><td data-i18n="sched-a6">Arts, Crafts &amp; Sinhala Literacy</td><td data-i18n="sched-g4">Ages 6 – 10</td><td>Ms. Anula Perera</td></tr>
+        <tr><td class="tc">11:00 – 11:30</td><td data-i18n="sched-a7">Closing Chanting &amp; Merit Transfer</td><td data-i18n="sched-g1">All students</td><td>Ven. Sumana Thera</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="stag rv"><span data-i18n="gallery-tag">Gallery</span></div>
+  <h2 class="rv" data-i18n="gallery-h2">Moments of stillness</h2>
+  <p class="rv" style="text-align:center;color:rgba(253,248,238,.5);font-size:.92rem;margin-bottom:2rem" data-i18n="gallery-sub">A glimpse into our shared practice and life at SGDV.</p>
+  <div class="gg">
+    <div class="gi rv" data-src="https://sgdv.lovable.app/assets/gallery-1-DDw8Yltn.jpg" data-cap="Morning meditation session"><img src="https://sgdv.lovable.app/assets/gallery-1-DDw8Yltn.jpg" alt="Gallery 1" loading="lazy"/><div class="gov"><span data-i18n="gal-1">Morning Practice</span><small data-i18n="gal-click">Click to enlarge</small></div></div>
+    <div class="gi rv" data-src="https://sgdv.lovable.app/assets/gallery-2-D9YUD1ez.jpg" data-cap="Dhamma lesson in progress"><img src="https://sgdv.lovable.app/assets/gallery-2-D9YUD1ez.jpg" alt="Gallery 2" loading="lazy"/><div class="gov"><span data-i18n="gal-2">Dhamma Lesson</span><small data-i18n="gal-click">Click to enlarge</small></div></div>
+    <div class="gi rv" data-src="https://sgdv.lovable.app/assets/gallery-3-BZUBhnbP.jpg" data-cap="Vesak celebrations"><img src="https://sgdv.lovable.app/assets/gallery-3-BZUBhnbP.jpg" alt="Gallery 3" loading="lazy"/><div class="gov"><span data-i18n="gal-3">Vesak Celebrations</span><small data-i18n="gal-click">Click to enlarge</small></div></div>
+    <div class="gi rv" data-src="https://sgdv.lovable.app/assets/gallery-4-B8OyqFWq.jpg" data-cap="Pāli chanting circle"><img src="https://sgdv.lovable.app/assets/gallery-4-B8OyqFWq.jpg" alt="Gallery 4" loading="lazy"/><div class="gov"><span data-i18n="gal-4">Pāli Chanting</span><small data-i18n="gal-click">Click to enlarge</small></div></div>
+    <div class="gi rv" data-src="https://sgdv.lovable.app/assets/gallery-5-DV6S1gVt.jpg" data-cap="Children's arts and crafts"><img src="https://sgdv.lovable.app/assets/gallery-5-DV6S1gVt.jpg" alt="Gallery 5" loading="lazy"/><div class="gov"><span data-i18n="gal-5">Arts &amp; Crafts</span><small data-i18n="gal-click">Click to enlarge</small></div></div>
+    <div class="gi rv" data-src="https://sgdv.lovable.app/assets/gallery-6-DM_XXHwQ.jpg" data-cap="Community gathering"><img src="https://sgdv.lovable.app/assets/gallery-6-DM_XXHwQ.jpg" alt="Gallery 6" loading="lazy"/><div class="gov"><span data-i18n="gal-6">Community</span><small data-i18n="gal-click">Click to enlarge</small></div></div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb"><button class="lbcl" id="lbcl">✕</button><button class="lbpv" id="lbpv">‹</button><img src="" alt="" id="lbimg"/><button class="lbnx" id="lbnx">›</button><div class="lbct" id="lbct"></div></div>
+
+<!-- TEACHERS -->
+<section id="teachers">
+  <div class="inner">
+    <div class="stag rv"><span data-i18n="teachers-tag">Teachers &amp; Community</span></div>
+    <h2 class="rv" data-i18n="teachers-h2">Guided by gentle wisdom</h2>
+    <p class="rv" style="text-align:center;color:var(--brown-lt);font-size:1rem;margin-bottom:2.5rem;max-width:600px;margin-inline:auto" data-i18n="teachers-sub">Our teachers are monastics and lay practitioners who walk the path themselves — offering each student their full presence.</p>
+    <div class="tg">
+      <div class="tc2 rv" data-modal="m-t1"><div class="tim"><img src="/img/Ven. Daranagama Gnanasiri Thero.jpg" alt="Ven. Daranagama Gnanasiri Thero" loading="lazy"/></div><div class="tro" data-i18n="teacher-role">Principal</div><div class="tnm" data-i18n="teacher-n1">Ven. Daranagama Gnanasiri Thero</div><p class="tbio" data-i18n="teacher-b1">Forty years of monastic practice, devoted to teaching children with patience and warmth.</p></div>
+      <div class="tc2 rv" data-modal="m-t3"><div class="tim"><img src="/img/Ven. Wathumulle Gnanissara Thero.jpg" alt="Ven. Wathumulle Gnanissara Thero" loading="lazy"/></div><div class="tro" data-i18n="teacher-role">Principal</div><div class="tnm" data-i18n="teacher-n2">Ven. Wathumulle Gnanissara Thero</div><p class="tbio" data-i18n="teacher-b2">Leads our weekly ānāpānasati and mettā sessions for students and parents.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="stag rv"><span data-i18n="events-tag">Upcoming Events</span></div>
+  <h2 class="rv" data-i18n="events-h2">Sacred Calendar</h2>
+  <div class="evg">
+    <div class="evc rv"><div class="evdt">May 12, 2025</div><div class="evti" data-i18n="ev-t1">Vesak Poya Celebration</div><p class="evde" data-i18n="ev-p1">Full-day celebrations marking the birth, enlightenment, and passing of the Buddha. Lantern procession, Dhamma talks, and communal dana.</p><span class="evbg" data-i18n="ev-b1">All Welcome</span></div>
+    <div class="evc rv"><div class="evdt">June 9, 2025</div><div class="evti" data-i18n="ev-t2">Poson Poya Day</div><p class="evde" data-i18n="ev-p2">Commemorating the introduction of Buddhism to Sri Lanka by Arahat Mahinda. Special chanting, procession, and children's programme.</p><span class="evbg" data-i18n="ev-b2">All Welcome</span></div>
+    <div class="evc rv"><div class="evdt">July 6, 2025</div><div class="evti" data-i18n="ev-t3">Annual Dhamma Exam</div><p class="evde" data-i18n="ev-p3">Students sit the national Dhamma school examination. Awards and certificates presented to graduating students in a ceremony with families.</p><span class="evbg" data-i18n="ev-b3">Students</span></div>
+    <div class="evc rv"><div class="evdt" data-i18n="ev-d4">Every Sunday</div><div class="evti" data-i18n="ev-t4">Regular Dhamma Classes</div><p class="evde" data-i18n="ev-p4">Weekly classes for all age groups, 8:00 AM to 11:30 AM. Meditation, Dhamma lessons, Pāli chanting, and mettā practice.</p><span class="evbg" data-i18n="ev-b4">Ongoing</span></div>
+    <div class="evc rv"><div class="evdt">August 2025</div><div class="evti" data-i18n="ev-t5">Esala Perahera Observance</div><p class="evde" data-i18n="ev-p5">Students participate in traditional cultural activities celebrating the sacred Tooth Relic and the spirit of the Kandy Esala Perahera.</p><span class="evbg" data-i18n="ev-b5">All Welcome</span></div>
+    <div class="evc rv"><div class="evdt">December 2025</div><div class="evti" data-i18n="ev-t6">End-of-Year Dana &amp; Ceremony</div><p class="evde" data-i18n="ev-p6">Closing ceremony for the year — students offer dana to the Sangha, present performances, and receive blessings for the coming year.</p><span class="evbg" data-i18n="ev-b6">Families</span></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner">
+    <div class="stag rv"><span data-i18n="contact-tag">Join Us</span></div>
+    <h2 class="rv" data-i18n="contact-h2">Begin your Dhamma journey</h2>
+    <p class="csub rv" data-i18n="contact-sub">Classes are held every Sunday morning. All children and families are welcome, regardless of background.</p>
+    <span class="cadr rv" data-i18n="contact-addr">☸ Sri Gunarathana Dharma Vidyalaya, Sri Lanka</span>
+    <div class="cgrid">
+      <div class="cinfo rvl">
+        <h3 data-i18n="contact-find">Find Us</h3>
+        <ul>
+          <li><span class="cico2">📍</span><span data-i18n="contact-loc">Sri Gunarathana Dharma Vidyalaya<br>Sri Lanka</span></li>
+          <li><span class="cico2">🕐</span><span data-i18n="contact-day">Every Sunday<br>8:00 AM – 11:30 AM</span></li>
+          <li><span class="cico2">📞</span><span>+94 XX XXX XXXX</span></li>
+          <li><span class="cico2">✉</span><span>info@sgdv.lk</span></li>
+          <li><span class="cico2">☸</span><span data-i18n="contact-welcome">All families welcome<br>No prior experience needed</span></li>
+        </ul>
+      </div>
+      <div class="rvr">
+        <form class="cf" id="cform">
+          <input type="text" data-i18n="contact-name" placeholder="Your name" required/>
+          <input type="email" data-i18n="contact-email" placeholder="Email address" required/>
+          <input type="text" data-i18n="contact-age" placeholder="Your child's age (optional)"/>
+          <textarea data-i18n="contact-msg" placeholder="How can we help?"></textarea>
+          <button type="submit" data-i18n="contact-send">Send Message ↗</button>
+        </form>
+        <div class="fsucc" id="fsucc" data-i18n="contact-success">🙏 &nbsp; Sadhu! Your message has been received. We will be in touch shortly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div class="fbrand"><div class="flogo">ධ</div><div class="fname" data-i18n="footer-brand">Sri Gunarathana Dharma Vidyalaya</div><div class="ftag" data-i18n="footer-tag">Guiding Young Minds Through the Path of Dhamma</div></div>
+    <div class="fcol"><h4 data-i18n="footer-nav">Navigate</h4><ul><li><a href="#intro" data-i18n="footer-about">About</a></li><li><a href="#mission" data-i18n="footer-mission">Mission</a></li><li><a href="#classes" data-i18n="footer-classes">Classes</a></li><li><a href="#gallery" data-i18n="footer-gallery">Gallery</a></li></ul></div>
+    <div class="fcol"><h4 data-i18n="footer-connect">Connect</h4><ul><li><a href="#teachers" data-i18n="footer-teachers">Our Teachers</a></li><li><a href="#events" data-i18n="footer-events">Events</a></li><li><a href="#schedule" data-i18n="footer-schedule">Schedule</a></li><li><a href="#contact" data-i18n="footer-contact">Contact</a></li></ul></div>
+    <div class="fcol"><h4 data-i18n="footer-dhamma">Dhamma</h4><ul><li><a href="#wheel-sec" data-i18n="footer-eightfold">Eightfold Path</a></li><li><a href="#mission" data-i18n="footer-four">Four Noble Truths</a></li><li><a href="#classes" data-i18n="footer-pali">Pāli Chanting</a></li><li><a href="#events" data-i18n="footer-calendar">Sacred Calendar</a></li></ul></div>
+  </div>
+  <div class="fbot"><div class="fbless" data-i18n="footer-bless">Sabbe sattā sukhitā hontu — May all beings be happy.</div><div class="fcopy" data-i18n="footer-copy">© 2025 Sri Gunarathana Dharma Vidyalaya · All Rights Reserved</div></div>
+</footer>
+
+<!-- MODALS (Classes) -->
+<div class="movo" id="m-dhamma"><div class="mbox"><button class="mcl">✕</button><div style="font-size:2rem;margin-bottom:.5rem">📖</div><h3>Dhamma Lessons</h3><div class="mmt">Ages 6 – 18 · Every Sunday 9:00 – 10:00 AM</div><p>Our Dhamma lessons bring the Buddha's teachings to life through Jātaka tales, parables, and age-appropriate storytelling. Children develop a deep understanding of the Four Noble Truths, the Law of Kamma, and the example set by the great disciples.</p><p>Lessons are divided into junior (ages 6–12) and senior (ages 13–18) groups, each guided by experienced teachers who bring warmth and wisdom to every session.</p><p>Students preparing for the national Dhamma examination receive additional coaching and resources to succeed with confidence.</p><button class="menr" data-goto="contact">Enroll Your Child →</button></div></div>
+<div class="movo" id="m-meditation"><div class="mbox"><button class="mcl">✕</button><div style="font-size:2rem;margin-bottom:.5rem">🧘</div><h3>Meditation</h3><div class="mmt">All ages · Every Sunday 8:20 – 9:00 AM</div><p>We teach two foundational practices: <em>ānāpānasati</em> (mindfulness of breathing) and <em>mettā bhāvanā</em> (loving-kindness meditation). Both are rooted in the Pāli canon and suitable for children from a young age.</p><p>Guided by Ven. Dhammika, sessions begin with gentle breath awareness and progress to radiating goodwill to family, community, and all living beings — a practice that carries far beyond the classroom.</p><p>Parents are warmly invited to join the adult session held concurrently in the main hall.</p><button class="menr" data-goto="contact">Enroll Your Child →</button></div></div>
+<div class="movo" id="m-pali"><div class="mbox"><button class="mcl">✕</button><div style="font-size:2rem;margin-bottom:.5rem">🎵</div><h3>Pāli Chanting</h3><div class="mmt">All ages · Sundays 8:00 – 8:20 AM &amp; 11:00 – 11:30 AM</div><p>Pāli is the sacred language of the Theravāda canon — the very tongue in which the Buddha's words were preserved. Students learn traditional suttas, protective chants (pirith), and the meaningful recitation of the Triple Gem.</p><p>We begin with short, melodic chants like the <em>Tisarana</em> and <em>Pañcasīla</em>, progressing to longer suttas such as the <em>Mangala Sutta</em> and <em>Karaṇīya Metta Sutta</em> as confidence grows.</p><button class="menr" data-goto="contact">Enroll Your Child →</button></div></div>
+<div class="movo" id="m-cultural"><div class="mbox"><button class="mcl">✕</button><div style="font-size:2rem;margin-bottom:.5rem">🪔</div><h3>Cultural Events</h3><div class="mmt">All families · Throughout the year</div><p>Our cultural programme celebrates the richness of Sri Lankan Buddhist heritage. Students participate in Vesak lantern making, Poson Perahera processions, and Esala observances — connecting devotion with creativity and community.</p><p>These events bring together students, families, and the wider community. Children perform Dhamma dramas, recite poetry, and display artwork inspired by the Jātaka tales and the life of the Buddha.</p><button class="menr" data-goto="contact">Get Involved →</button></div></div>
+<!-- MODALS (Teachers) -->
+<div class="movo" id="m-t1"><div class="mbox"><button class="mcl">✕</button><div style="width:110px;height:110px;margin:0 auto .8rem;border-radius:50%;overflow:hidden;border:2px solid #bf0000"><img src="/img/Ven. Daranagama Gnanasiri Thero.jpg" style="width:100%;height:100%;object-fit:cover"/></div><h3>Ven. Daranagama Gnanasiri Thero</h3><div class="mmt">Principal · Senior Monk</div><p>Venerable Daranagama Gnanasiri Thero has dedicated forty years to monastic life and the education of the young. Ordained at the age of nineteen, he studied at Kelaniya University and has taught Dhamma to thousands of children across Sri Lanka.</p><p>His teaching style combines deep scriptural knowledge with a gift for storytelling that keeps even the youngest students enraptured. He oversees the SGDV curriculum and guides the advanced senior students personally.</p><button class="menr" data-goto="contact">Contact the School →</button></div></div>
+<div class="movo" id="m-t3"><div class="mbox"><button class="mcl">✕</button><div style="width:110px;height:110px;margin:0 auto .8rem;border-radius:50%;overflow:hidden;border:2px solid #bf0000"><img src="/img/Ven. Wathumulle Gnanissara Thero.jpg" style="width:100%;height:100%;object-fit:cover"/></div><h3>Ven. Wathumulle Gnanissara Thero</h3><div class="mmt">Principal · Resident Monk</div><p>Venerable Wathumulle Gnanissara Thero trained at a forest monastery in the hills of Sri Lanka, where he deepened his practice of ānāpānasati and vipassanā over twelve years before joining SGDV as our resident meditation guide.</p><p>He leads all Sunday meditation sessions and offers individual guidance to students who wish to deepen their practice. He also facilitates a monthly parents' meditation sitting.</p><button class="menr" data-goto="contact">Contact the School →</button></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
