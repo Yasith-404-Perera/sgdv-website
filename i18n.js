@@ -4,7 +4,7 @@ const SI = {
   'nav-gallery':'ගැලරිය','nav-teachers':'ගුරුවරු','nav-events':'උත්සව',
   'nav-contact':'සම්බන්ධ වන්න','nav-brand':'ශ්‍රී ගුණරතන ධර්ම විද්‍යාලය',
   'nav-sub':'ධර්ම විද්‍යාලය',
-  'hero-school':'ශ්‍රී ගුණරතන ධර්ම විද්‍යාලය',
+  'hero-school':'Sri Gunarathana Dharma Vidyalaya',
   'hero-h1':'මාර්ගය ආරම්භ වේ<em>නිහැඬියාවෙන්</em>',
   'hero-sub':'ධර්මයේ ශාශ්වත මාර්ගය ඔස්සේ තරුණ මනස් මෙහෙයවීම — ප්‍රඥාව, කරුණාව සහ අභ්‍යන්තර සාමය.',
   'hero-btn1':'ගමන ආරම්භ කරන්න','hero-btn2':'ඔබේ දරුවා ඇතුළත් කරන්න',
