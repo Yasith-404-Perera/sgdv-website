@@ -3,7 +3,7 @@
 
 <h1><p align="center">Sri Gunarathana Dharma Vidyalaya</h1>
 
-Welcome to the repository for the **Sri Gunarathana Dharma Vidyalaya** website. This project is a modern, responsive, and visually immersive web experience built to represent a Dhamma school rooted in the Theravāda tradition. It aims to provide information about the school's mission, classes, teachers, events, and community while offering a serene digital environment.
+<p align="center">Welcome to the repository for the **Sri Gunarathana Dharma Vidyalaya** website. This project is a modern, responsive, and visually immersive web experience built to represent a Dhamma school rooted in the Theravāda tradition. It aims to provide information about the school's mission, classes, teachers, events, and community while offering a serene digital environment.</p>
 
 ## 🌟 Key Features
 
