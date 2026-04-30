@@ -5,7 +5,7 @@
 
 <p align="center">Welcome to the repository for the <strong>Sri Gunarathana Dharma Vidyalaya</strong> website. This project is a modern, responsive, and visually immersive web experience built to represent a Dhamma school rooted in the Theravāda tradition. It aims to provide information about the school's mission, classes, teachers, events, and community while offering a serene digital environment.</p>
 
-** 🌟 Key Features
+## 🌟 Key Features
 
 *   **Bilingual Support (i18n):** Fully functional English and Sinhala language modes. The website translates all UI elements and dynamically adjusts typography (e.g., swapping to Noto Sans Sinhala) when toggled.
 *   **Immersive 3D Visuals:** Incorporates `Three.js` for authentic, refined 3D visualizations, including a majestic Stupa section inspired by traditional Sri Lankan temple architecture.
