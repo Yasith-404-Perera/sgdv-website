@@ -5,11 +5,22 @@
 }
 
 :root{
-  --gold:#c9a84c; --maroon-lt:#9f0101;--maroon-dk:#6a1515;--maroon-glow:rgba(170, 52, 52, 0.537);
-  --cream:#fdeeee;--parchment:#f5d6d6;--brown:#3b1414;--brown-lt:#672828;
-  --brown-dk:#1a0f05;--sage:#5a6b52;--off-white:#fefbf4;
-  --shadow:rgba(59,42,20,.18);--shadow-deep:rgba(26,15,5,.45);
-  --ff-d:'Cormorant Garamond',serif;--ff-b:'EB Garamond',serif;--ff-s:'Noto Sans Sinhala',sans-serif;
+  --gold:#c9a84c;
+  --maroon-lt:#9f0101;
+  --maroon-dk:#6a1515;
+  --maroon-glow:rgba(170, 52, 52, 0.537);
+  --cream:#fdeeee;
+  --parchment:#f5d6d6;
+  --brown:#3b1414;
+  --brown-lt:#672828;
+  --brown-dk:#1a0f05;
+  --sage:#5a6b52;
+  --off-white:#fefbf4;
+  --shadow:rgba(59,42,20,.18);
+  --shadow-deep:rgba(26,15,5,.45);
+  --ff-d:'Cormorant Garamond',serif;
+  --ff-b:'EB Garamond',serif;
+  --ff-s:'FMAbhaya',sans-serif;
 }
 
 html{
