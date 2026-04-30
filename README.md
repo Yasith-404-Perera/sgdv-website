@@ -12,7 +12,7 @@ Welcome to the repository for the **Sri Gunarathana Dharma Vidyalaya** website. 
 *   **Premium Interactive Design:**
     *   Custom dynamic cursor that interacts with the page elements.
     *   Smooth scrolling and scroll-triggered reveal animations.
-    *   Elegant typography utilizing Google Fonts (*Cormorant Garamond*, *EB Garamond*, and *Noto Sans Sinhala*).
+    *   Elegant typography utilizing Google Fonts (*Cormorant Garamond*, *EB Garamond*, and *Noto Serif Sinhala*).
 *   **Fully Responsive:** Adapts seamlessly to all screen sizes, from desktop monitors to mobile devices, ensuring accessibility for all parents and students.
 
 ## 🛠️ Technologies Used
