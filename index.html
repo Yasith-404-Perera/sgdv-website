@@ -6,7 +6,7 @@
 <title>Sri Gunarathana Dharma Vidyalaya — Path of the Dhamma</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+Sinhala:wght@300;400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto Serif Sinhala:wght@300;400&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="./img/favicon.ico">
 
@@ -15,7 +15,7 @@
 
 <div class="cur-dot" id="cdot"></div>
 <div class="cur-ring" id="cring"></div>
-<button class="bktop" id="bktop">↑</button>
+<button class="bktop" id="bktop" aria-label="Back to top">↑</button>
 
 <!-- NAV -->
 <nav id="nav">
@@ -31,14 +31,15 @@
     <li><a href="#teachers" data-i18n="nav-teachers">Teachers</a></li>
     <li><a href="#events" data-i18n="nav-events">Events</a></li>
     <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
-    <li><button class="ltog" id="lbtn">සි</button></li>
+    <li><button class="ltog" id="lbtn" data-lang-toggle aria-label="Switch language">සි</button></li>
   </ul>
-  <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+  <button class="hbg" id="hbg" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
 </nav>
-<div class="mob-menu" id="mmenu">
+<div class="mob-menu" id="mmenu" aria-hidden="true">
   <a href="#intro" data-i18n="nav-about">About</a><a href="#mission" data-i18n="nav-mission">Mission</a><a href="#classes" data-i18n="nav-classes">Classes</a>
   <a href="#gallery" data-i18n="nav-gallery">Gallery</a><a href="#teachers" data-i18n="nav-teachers">Teachers</a>
   <a href="#events" data-i18n="nav-events">Events</a><a href="#contact" data-i18n="nav-contact">Contact</a>
+  <button class="ltog mob-lang" data-lang-toggle aria-label="Switch language">සි</button>
 </div>
 
 <!-- HERO -->
@@ -171,13 +172,12 @@
     <table class="sch-t rv">
       <thead><tr><th data-i18n="th-time">Time</th><th data-i18n="th-activity">Activity</th><th data-i18n="th-age">Age Group</th><th data-i18n="th-teacher">Teacher</th></tr></thead>
       <tbody>
-        <tr><td class="tc">8:00 – 8:20</td><td data-i18n="sched-a1">Morning Pāli Chanting &amp; Blessings</td><td data-i18n="sched-g1">All students</td><td>Ven. Sumana Thera</td></tr>
-        <tr><td class="tc">8:20 – 9:00</td><td data-i18n="sched-a2">Ānāpānasati Meditation</td><td data-i18n="sched-g1">All students</td><td>Ven. Dhammika</td></tr>
-        <tr><td class="tc">9:00 – 10:00</td><td data-i18n="sched-a3">Dhamma Lessons &amp; Jātaka Stories</td><td data-i18n="sched-g2">Ages 6 – 12</td><td>Ms. Anula Perera</td></tr>
-        <tr><td class="tc">9:00 – 10:00</td><td data-i18n="sched-a4">Advanced Dhamma Study</td><td data-i18n="sched-g3">Ages 13 – 18</td><td>Ven. Sumana Thera</td></tr>
-        <tr><td class="tc">10:00 – 10:30</td><td data-i18n="sched-a5">Mettā Practice &amp; Dana</td><td data-i18n="sched-g1">All students</td><td>Ven. Dhammika</td></tr>
-        <tr><td class="tc">10:30 – 11:00</td><td data-i18n="sched-a6">Arts, Crafts &amp; Sinhala Literacy</td><td data-i18n="sched-g4">Ages 6 – 10</td><td>Ms. Anula Perera</td></tr>
-        <tr><td class="tc">11:00 – 11:30</td><td data-i18n="sched-a7">Closing Chanting &amp; Merit Transfer</td><td data-i18n="sched-g1">All students</td><td>Ven. Sumana Thera</td></tr>
+        <tr><td class="tc">8:00 – 8:20</td><td data-i18n="sched-a1">Morning Pāli Chanting &amp; Blessings</td><td data-i18n="sched-g1">All students</td><td data-i18n="teacher-n2">Ven. Wathumulle Gnanissara Thero</td></tr>
+        <tr><td class="tc">8:20 – 9:00</td><td data-i18n="sched-a2">Ānāpānasati Meditation</td><td data-i18n="sched-g1">All students</td><td data-i18n="teacher-n2">Ven. Wathumulle Gnanissara Thero</td></tr>
+        <tr><td class="tc">9:00 – 10:00</td><td data-i18n="sched-a3">Dhamma Lessons &amp; Jātaka Stories</td><td data-i18n="sched-g2">Ages 6 – 12</td><td data-i18n="nav-teachers">Teachers</td></tr>
+        <tr><td class="tc">9:00 – 10:00</td><td data-i18n="sched-a4">Advanced Dhamma Study</td><td data-i18n="sched-g3">Ages 13 – 18</td><td data-i18n="nav-teachers">Teachers</td></tr>
+        <tr><td class="tc">10:00 – 10:30</td><td data-i18n="sched-a5">Mettā Practice &amp; Dana</td><td data-i18n="sched-g1">All students</td><td data-i18n="teacher-n2">Ven. Wathumulle Gnanissara Thero</td></tr>
+        <tr><td class="tc">10:30 – 11:00</td><td data-i18n="sched-a6">Arts, Crafts &amp; Sinhala Literacy</td><td data-i18n="sched-g4">Ages 6 – 10</td><td data-i18n="nav-teachers">Teachers</td></tr>
       </tbody>
     </table>
   </div>
@@ -283,6 +283,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="i18n.js"></script>
 <script src="script.js"></script>
-<script src="premium-cursor.js"></script>
 </body>
 </html>

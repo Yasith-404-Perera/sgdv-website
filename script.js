@@ -7,7 +7,13 @@
   const s=new THREE.Scene();
   const cam=new THREE.PerspectiveCamera(60,1,.1,100);
   cam.position.z=5;
-  function rsz(){const w=c.parentElement.offsetWidth,h=c.parentElement.offsetHeight;r.setSize(w,h);cam.aspect=w/h;cam.updateProjectionMatrix();}
+  let isHeroMobile=false,sg;
+  function applyHeroStupaLayout(){
+    if(!sg)return;
+    sg.scale.setScalar(isHeroMobile?.34:1);
+    sg.position.z=isHeroMobile?-1.95:-1.5;
+  }
+  function rsz(){const w=c.parentElement.offsetWidth,h=c.parentElement.offsetHeight;isHeroMobile=w<700;r.setSize(w,h);cam.aspect=w/h;cam.position.z=isHeroMobile?6.2:5;cam.updateProjectionMatrix();applyHeroStupaLayout();}
   rsz();window.addEventListener('resize',rsz);
 
   // Lighting — warm ambient + directional for white stupa
@@ -16,7 +22,7 @@
   const dl2=new THREE.DirectionalLight(0xd4c5a0,.4);dl2.position.set(-3,2,1);s.add(dl2);
 
   // Stupa group
-  const sg=new THREE.Group();
+  sg=new THREE.Group();
   const white=(ro=.55)=>new THREE.MeshStandardMaterial({color:0xf5f2ec,metalness:.05,roughness:ro});
   const gold=(ro=.3)=>new THREE.MeshStandardMaterial({color:0xd4af37,metalness:.65,roughness:ro});
 
@@ -60,7 +66,7 @@
   const crystal=new THREE.Mesh(new THREE.SphereGeometry(.05,12,12),new THREE.MeshStandardMaterial({color:0xfffde0,emissive:0xffd700,emissiveIntensity:2.5,roughness:0,metalness:.2,transparent:true,opacity:.9}));
   crystal.position.y=1.5;sg.add(crystal);
 
-  sg.position.set(0,-.3,-1.5);s.add(sg);
+  sg.position.set(0,-.3,-1.5);applyHeroStupaLayout();s.add(sg);
 
   // Decorative rings in background
   const mk=new THREE.MeshBasicMaterial({color:0xd4af37,transparent:true,opacity:.12});
@@ -77,7 +83,7 @@
   window.addEventListener('mousemove',e=>{mx=(e.clientX/innerWidth-.5)*2;my=(e.clientY/innerHeight-.5)*2;});
   let t=0;
   (function anim(){requestAnimationFrame(anim);t+=.07;
-    sg.position.y=-.3+Math.sin(t*.4)*.025;sg.position.x=mx*.1;sg.rotation.y=mx*.07;
+    sg.position.y=(isHeroMobile?-3.1:-.3)+Math.sin(t*.4)*.025;sg.position.x=mx*.1;sg.rotation.y=mx*.07;
     ring1.rotation.z=t*.03;ring2.rotation.z=-t*.02;ring1.position.x=mx*.04;ring1.position.y=-my*.04;
     crystal.material.emissiveIntensity=2+Math.sin(t*2)*.8;
     const p=pg.attributes.position.array;
@@ -189,15 +195,42 @@ document.getElementById('bktop').onclick=()=>window.scrollTo({top:0,behavior:'sm
 document.getElementById('hscroll').onclick=()=>document.getElementById('intro').scrollIntoView({behavior:'smooth'});
 // hamburger
 const hbg=document.getElementById('hbg'),mm=document.getElementById('mmenu');
-hbg.onclick=()=>{hbg.classList.toggle('op');mm.classList.toggle('op');};
-mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('op');mm.classList.remove('op');}));
+const mobileMq=window.matchMedia('(max-width: 800px)');
+function closeMenu(){
+  hbg.classList.remove('op');
+  mm.classList.remove('op');
+  hbg.setAttribute('aria-expanded','false');
+  mm.setAttribute('aria-hidden','true');
+  document.body.classList.remove('menu-open');
+}
+function toggleMenu(){
+  const open=!mm.classList.contains('op');
+  hbg.classList.toggle('op',open);
+  mm.classList.toggle('op',open);
+  hbg.setAttribute('aria-expanded',open?'true':'false');
+  mm.setAttribute('aria-hidden',open?'false':'true');
+  document.body.classList.toggle('menu-open',open);
+}
+function syncMobileMode(){
+  document.body.classList.toggle('is-mobile',mobileMq.matches);
+  if(!mobileMq.matches)closeMenu();
+}
+hbg.onclick=toggleMenu;
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+mobileMq.addEventListener?.('change',syncMobileMode);
+syncMobileMode();
 // custom cursor
 const cd=document.getElementById('cdot'),cr=document.getElementById('cring');
-document.addEventListener('mousemove',e=>{cd.style.left=e.clientX+'px';cd.style.top=e.clientY+'px';cr.style.left=e.clientX+'px';cr.style.top=e.clientY+'px';});
-document.querySelectorAll('a,button,.cc,.tc2,.gi').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cr.style.width='50px';cr.style.height='50px';cr.style.opacity='1';});
-  el.addEventListener('mouseleave',()=>{cr.style.width='32px';cr.style.height='32px';cr.style.opacity='.55';});
-});
+if(window.matchMedia('(pointer:fine)').matches){
+  document.addEventListener('mousemove',e=>{cd.style.left=e.clientX+'px';cd.style.top=e.clientY+'px';cr.style.left=e.clientX+'px';cr.style.top=e.clientY+'px';});
+  document.querySelectorAll('a,button,.cc,.tc2,.gi').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cr.style.width='50px';cr.style.height='50px';cr.style.opacity='1';});
+    el.addEventListener('mouseleave',()=>{cr.style.width='32px';cr.style.height='32px';cr.style.opacity='.55';});
+  });
+}else{
+  cd.style.display='none';
+  cr.style.display='none';
+}
 // contact form
 document.getElementById('cform').onsubmit=function(e){e.preventDefault();this.style.display='none';document.getElementById('fsucc').style.display='block';setTimeout(()=>{this.style.display='grid';document.getElementById('fsucc').style.display='none';this.reset();},5000);};
 // modals open

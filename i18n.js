@@ -157,9 +157,10 @@ function applyLang(newLang){
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
-  document.getElementById('lbtn').onclick=function(){
+  const langButtons=[...document.querySelectorAll('[data-lang-toggle]')];
+  langButtons.forEach(btn=>btn.addEventListener('click',()=>{
     const next=lang==='en'?'si':'en';
-    this.textContent=next==='si'?'EN':'සි';
+    langButtons.forEach(item=>{item.textContent=next==='si'?'EN':'සි';});
     applyLang(next);
-  };
+  }));
 });
