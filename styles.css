@@ -1423,6 +1423,36 @@ footer{
   .gov{
     opacity:1;
   }
+@media(max-width:800px){
+  .nl{
+    display:none;
+  }
+  .hbg{
+    display:flex;
+  }
+  .gg{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .gi:nth-child(3){
+    grid-row:auto;
+    aspect-ratio:4/3;
+  }
+  .gi:nth-child(6){
+    display:block;
+  }
+  .cgrid{
+    grid-template-columns:1fr;
+  }
+  .epath{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .wt{
+    text-align:center;
+  }
+  .ftop{
+    flex-direction:column;
+    gap:2rem;
+  }
 }
 
 @media(max-width:900px){
@@ -2188,4 +2218,5 @@ body.si .menr{
   body.si #intro h2,body.si .mh h2,body.si #classes h2,body.si #gallery h2,body.si #teachers h2,body.si #events h2,body.si #contact h2{
     font-size:1.55rem;
   }
+}
 }
